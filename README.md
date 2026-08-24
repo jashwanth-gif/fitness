@@ -1,6 +1,6 @@
-# ⚡ ASCEND // Solo-Leveling Fitness System
+# ⚡ HUNTERFIT// Solo-Leveling Fitness System
 
-**ASCEND** is a gamified RPG-style fitness tracking web application inspired by the *Solo Leveling* "System". Turn your real-life workouts, habits, and exercise routines into experience points (XP), stat points, rank-ups, and title achievements. 
+**HUNTERFIT** is a gamified RPG-style fitness tracking web application inspired by the *Solo Leveling* "System". Turn your real-life workouts, habits, and exercise routines into experience points (XP), stat points, rank-ups, and title achievements. 
 
 Live your own leveling journey, track your daily quests, consult your personal AI Coach, and back up your progress securely.
 
