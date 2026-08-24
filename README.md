@@ -1,32 +1,77 @@
-# React + TypeScript + Vite
+# ⚡ ASCEND // Solo-Leveling Fitness System
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**ASCEND** is a gamified RPG-style fitness tracking web application inspired by the *Solo Leveling* "System". Turn your real-life workouts, habits, and exercise routines into experience points (XP), stat points, rank-ups, and title achievements. 
 
-Currently, two official plugins are available:
+Live your own leveling journey, track your daily quests, consult your personal AI Coach, and back up your progress securely.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **🏆 Gamified RPG System:** Allocate stat points (Strength, Agility, Vitality, Intelligence, Sense) upon leveling up. Unlock new titles and advance your hunter rank as you gain XP from completing workouts.
+*   **🤖 Gemini-Powered AI Coach:** Get personalized, dynamic weekly fitness plans, tailored guidance, and answers to your fitness and nutrition questions.
+*   **📅 Daily Quest Log:** Automatically maps your weekly workout schedule into daily quests and checkpoints. Complete them to earn rewards, maintain your daily streak, and burn calories.
+*   **🏋️ Exercise Library:** A library of exercises to track and learn proper movements, complete with MET-based calorie consumption calculation.
+*   **☁️ Google Drive Backup & Sync:** Keep your progress safe. Export, import, and sync your character sheet data to your Google Drive account.
+*   **🔒 Local First:** All progress is stored in your browser's local storage. Fully functional offline.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 🛠️ Tech Stack
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+*   **Frontend Framework:** React 18 with TypeScript
+*   **Build Tool:** Vite
+*   **Styling:** Tailwind CSS
+*   **Icons:** Lucide React
+*   **AI Integration:** Gemini API
+*   **Authentication & Storage:** LocalStorage + Google Drive Sync API
+
+---
+
+## 📦 Getting Started
+
+### 📋 Prerequisites
+
+Make sure you have [Node.js](https://nodejs.org/) installed (v18+ recommended).
+
+### ⚙️ Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/jashwanth-gif/fitness.git
+   cd fitness
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open your browser and navigate to `http://localhost:5173`.
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+---
+
+## ⚙️ Configuration & Environment Variables
+
+Create a `.env` file in the root directory if you want to enable the AI Coach or Google Drive Sync.
+
+```env
+VITE_GEMINI_API_KEY=your_gemini_api_key_here
+VITE_GOOGLE_CLIENT_ID=your_google_client_id_here
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## 📜 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
