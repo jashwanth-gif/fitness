@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Rajdhani', system-ui, sans-serif;
+  --font-mono: 'Rajdhani', monospace;
+  
+  --color-surface-lowest: #100d16;
+  --color-surface-low: #1e1a24;
+  --color-surface: #15121b;
+  --color-surface-bright: #3c3742;
+  --color-surface-container: #221e28;
+  --color-surface-container-low: #1e1a24;
+  --color-surface-container-lowest: #100d16;
+  --color-surface-container-high: #2c2833;
+  --color-surface-container-highest: #37333e;
+  --color-on-surface: #e8dfee;
+  --color-on-surface-variant: #cdc2d8;
+  --color-outline: #968da1;
+  --color-outline-variant: #4b4455;
+  --color-primary: #d4bbff;
+  --color-on-primary: #41008b;
+  --color-primary-container: #8a3ffc;
+  --color-on-primary-container: #faf1ff;
+  --color-secondary: #ffaaf9;
+  --color-on-secondary: #5a005f;
+  --color-secondary-container: #a600af;
+  --color-on-secondary-container: #ffc7f8;
+  --color-tertiary: #bbc3ff;
+  --color-on-tertiary: #001b96;
+  --color-tertiary-container: #4c61ea;
+  --color-on-tertiary-container: #f5f3ff;
+  --color-background: #15121b;
+  --color-on-background: #e8dfee;
+  
+  --color-rank-gold: #e8b93f; /* reserved exclusively for rank */
+}
+
+/* Custom Base Styles */
+body {
+  font-family: var(--font-sans);
+  background-color: #15121b;
+  color: #e8dfee;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism Styles matching Aura Strike design system */
+.glass-panel {
+  background-color: #130d1f;
+  border: 1px solid rgba(205, 194, 216, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.aura-glow {
+  box-shadow: 0 0 16px rgba(138, 63, 252, 0.3);
+}
+
+.input-technical {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(205, 194, 216, 0.2);
+  border-radius: 0;
+  padding: 8px 0;
+  color: #e8dfee;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.input-technical:focus {
+  outline: none;
+  border-bottom-color: #bbc3ff;
+  box-shadow: 0 4px 12px rgba(187, 195, 255, 0.1);
+}
+
+.input-technical::placeholder {
+  color: #635b7a;
+}
+
+/* Slow aura waves background effect */
+.bg-waves {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(135deg, #0a0710 0%, #15121b 50%, #0a0710 100%);
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  width: 200vw;
+  height: 200vw;
+  background: radial-gradient(circle, rgba(138,63,252,0.05) 0%, rgba(212,187,255,0) 70%);
+  border-radius: 40%;
+  animation: drift 30s infinite linear;
+  top: -50vw;
+  left: -50vw;
+}
+
+.wave:nth-child(2) {
+  background: radial-gradient(circle, rgba(166,0,175,0.05) 0%, rgba(255,170,249,0) 70%);
+  animation: drift 40s infinite linear reverse;
+  top: -20vw;
+  left: -80vw;
+}
+
+@keyframes drift {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Technical CLI-like CTAs with crosshair corners */
+.btn-technical {
+  position: relative;
+  background: linear-gradient(90deg, #8a3ffc 0%, #d13fd6 100%);
+  color: #faf1ff;
+  border: none;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-technical::before, .btn-technical::after,
+.btn-technical-inner::before, .btn-technical-inner::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: #faf1ff;
+  border-style: solid;
+  pointer-events: none;
+}
+
+.btn-technical::before { top: 0; left: 0; border-width: 2px 0 0 2px; }
+.btn-technical::after { top: 0; right: 0; border-width: 2px 2px 0 0; }
+
+.btn-technical-inner {
+  position: absolute;
+  inset: 0;
+}
+.btn-technical-inner::before { bottom: 0; left: 0; border-width: 0 0 2px 2px; }
+.btn-technical-inner::after { bottom: 0; right: 0; border-width: 0 2px 2px 0; }
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #100d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2c2833;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8a3ffc;
+}
